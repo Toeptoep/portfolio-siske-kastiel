@@ -1,0 +1,125 @@
+/* ---------- Contact page ---------- */
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 12px 32px rgba(18, 33, 60, 0.08);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--pink-soft);
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--pink-soft);
+  color: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contact-row .label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sky);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.contact-row .value {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.badge-card {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--blue) 100%);
+  border-radius: 20px;
+  padding: 32px;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 0%, rgba(255, 127, 168, 0.35), transparent 60%);
+}
+
+.badge-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--pink);
+  margin: 0 auto 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.badge-card h3 {
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 4px;
+}
+
+.badge-card p {
+  position: relative;
+  z-index: 1;
+  color: var(--pink-soft);
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+}
+
+.availability-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  display: inline-block;
+}
+
+.availability-list li {
+  padding: 6px 0;
+  font-size: 0.92rem;
+}
+
+.availability-list li::before {
+  content: "\2726";
+  color: var(--pink);
+  margin-right: 10px;
+}
+
+@media (max-width: 720px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}

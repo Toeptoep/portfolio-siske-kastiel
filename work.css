@@ -1,0 +1,99 @@
+/* ---------- Work / Experience page ---------- */
+
+.page-hero {
+  padding: 60px 0 20px;
+  text-align: left;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  border-left: 3px solid var(--pink-soft);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 44px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -41px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 4px solid var(--pink);
+}
+
+.timeline-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--sky);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.timeline-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin-top: 8px;
+  box-shadow: 0 8px 24px rgba(18, 33, 60, 0.06);
+}
+
+.timeline-card h3 {
+  margin-bottom: 2px;
+  font-size: 1.15rem;
+}
+
+.timeline-card .org {
+  color: var(--pink);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.timeline-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.timeline-card li {
+  margin-bottom: 6px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 720px) {
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-item::before {
+    left: -33px;
+  }
+}

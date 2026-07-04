@@ -1,0 +1,321 @@
+/* =========================================================
+   Siske Kastiel Cindy — Portfolio
+   Palette:
+   --navy       #12213C  (primary / text)
+   --blue       #23478A  (headings / links)
+   --sky        #6C9FE0  (mid accent)
+   --pink       #FF7FA8  (signature accent)
+   --pink-soft  #FFE1EC  (backgrounds / tags)
+   --paper      #F7F8FC  (page background)
+   Type: "Poppins" for display, "Inter" for body/utility
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --navy: #12213C;
+  --blue: #23478A;
+  --sky: #6C9FE0;
+  --pink: #FF7FA8;
+  --pink-soft: #FFE1EC;
+  --paper: #F7F8FC;
+  --white: #FFFFFF;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--navy);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--blue);
+  margin: 0 0 0.5em 0;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header / Nav (the "badge strap") ---------- */
+
+.site-header {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.nav-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-brand .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pink);
+  display: inline-block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  background: var(--pink);
+  color: var(--navy);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid var(--white);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--navy);
+  color: var(--pink-soft);
+  text-align: center;
+  padding: 28px 24px;
+  margin-top: 80px;
+  font-size: 0.9rem;
+}
+
+.site-footer .footer-name {
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* ---------- Reusable section utilities ---------- */
+
+.section {
+  padding: 70px 0;
+}
+
+.section-label {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink);
+  background: var(--pink-soft);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.section-heading {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  max-width: 640px;
+}
+
+/* Signature element: "lanyard" divider used across pages */
+.lanyard-divider {
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--sky) 45%, var(--pink) 100%);
+  border-radius: 999px;
+  margin: 40px 0;
+}
+
+/* Tag / pill used for skills & languages */
+.tag {
+  display: inline-block;
+  background: var(--white);
+  border: 1.5px solid var(--sky);
+  color: var(--blue);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin: 0 8px 8px 0;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background: var(--pink);
+  color: var(--navy);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 127, 168, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.btn-outline:hover {
+  box-shadow: 0 10px 20px rgba(35, 71, 138, 0.2);
+}
+
+/* ---------- Home page hero ---------- */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-title {
+  max-width: 520px;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-text p {
+  max-width: 520px;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  border-radius: 24px;
+  border: 6px solid var(--white);
+  box-shadow: 0 20px 45px rgba(18, 33, 60, 0.18);
+}
+
+.section-tight {
+  padding-top: 0;
+}
+
+.skills-tags,
+.lang-tags {
+  margin-top: 22px;
+}
+
+.about-text {
+  max-width: 680px;
+}
+
+@media (max-width: 720px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--navy);
+    padding: 12px 24px 20px;
+    display: none;
+    gap: 4px;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-brand {
+    font-size: 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+}
